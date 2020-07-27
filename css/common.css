@@ -1,0 +1,76 @@
+ css init */
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration:none; 
+}
+
+li {
+	list-style: none;
+}
+
+/* css init end */
+
+
+/* header and nav */
+.logo {
+	display: flex;
+	align-items: center;
+}
+
+.logo::before {
+	content: '';
+	width: 30px;
+	height: 30px;
+	background-image: linear-gradient(to bottom,red,orange,yellow,green,blue,indigo,purple);
+	display: block;
+}
+
+/* header and nav end */
+
+
+/* footer */
+footer {
+	background-color: #333030;
+	color: #f4f5f9;
+	height: 50px;
+}
+
+/*footer end*/
+
+
+/* 480px */
+.collapse {
+	display: block !important;
+}
+
+/* 480px end */
+
+/* works on booth.html */
+
+#map {
+	border:1px solid #a7a7a7;
+}
+
+/* #map : code for B_Module */
+
+.map_a {
+	width: 400px;
+	height: 400px;
+	border:1px solid #a7a7a7;
+	display: grid;
+	grid-template-columns: repeat(10,1fr);
+	grid-template-rows: repeat(10,1fr);
+}
+
+.map_a > div {
+	border:1px solid #ddd;
+}
+
+/* works on booth.html end 
