@@ -2,11 +2,13 @@
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<title>경북 A 모듈</title>
+	<title>경북 B 모듈</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/common.css">
+	<script src="js/BoothReserveApp.js"></script>
 </head>
 <body>
+	<!-- bootstrap container  -->
 	<div class="container">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<a class="navbar-brand logo" href="index.html">
@@ -17,11 +19,11 @@
 					<li class="nav-item">
 						<a class="nav-link" href="index.html">홈</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item active">
 						<a class="nav-link" href="booth_reserve.html">부스 예약</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">부스 신청</a>
+						<a class="nav-link" href="booth_apply.html">부스 신청</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#">참여 현황</a>
@@ -35,7 +37,7 @@
 			</div>
 
 			<div class="navbar-nav ml-auto">
-				<li class="nav-item active">
+				<li class="nav-item">
 					<a class="nav-link" href="login.html">로그인</a>
 				</li>
 				<li class="nav-item">
@@ -43,21 +45,28 @@
 				</li>		
 			</div>
 		</nav>
+		
 
-		<h1 class="mt-5">로그인</h1>
-		<form method="POST" onsubmit="return false;">
-			<div class="form-group">
-				<label for="login_id">아이디</label>
-				<input type="text" class="form-control" id="login_id">
+		<div class="row">
+			<div class="col-6 mt-5">
+				<h4>부스 지도</h4>
+				<canvas width="400" height="400" id="map"></canvas>
 			</div>
-			<div class="form-group">
-				<label for="login_pwd">비밀번호</label>
-				<input type="password" class="form-control" id="login_pwd">
+			<div class="col-6 mt-5">
+				<form method="POST" onsubmit="return false;">
+					<h4>입력 폼</h4>
+					<div class="form-group">
+						<label for="info_name">부스 이름</label>
+						<input type="text" class="form-control" id="info_name" readonly>
+					</div>
+					<div class="form-group">
+						<label for="info_price">부스 이용료</label>
+						<input type="text" class="form-control" id="info_price" readonly>
+					</div>
+				</form>
 			</div>
-			<button type="submit" class="btn btn-primary">로그인</button>
-		</form>
-			
-		<a href="join.html" class="btn btn-info mt-4">회원가입</a>
+		</div>
+
 
 		<footer class="row mt-5 display-flex justify-content-center align-items-center">
 			Copyright ⓒ 2017-2019 Jeonju Bibimbap Festival Organizing Committee. All rights reserved. 
